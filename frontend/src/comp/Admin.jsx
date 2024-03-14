@@ -1,19 +1,18 @@
-import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 export default function Admin() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
-
 
   function submitHandler(e) {
     e.preventDefault();
-    if (username === 'admin' && password === 'admin') {
-    
+    if (username === "admin" && password === "admin") {
       setLoggedIn(true);
     } else {
-      document.querySelector('#log').textContent = 'Check the password or username';
+      document.querySelector("#log").textContent =
+        "Check the password or username";
     }
   }
 
